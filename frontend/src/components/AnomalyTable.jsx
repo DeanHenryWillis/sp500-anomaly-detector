@@ -40,7 +40,6 @@ export default function AnomalyTable({ anomalies, filter, search, sort }) {
           <tr style={{ background: '#f8fafc' }}>
             <th style={th}>Ticker</th>
             <th style={th}>Date</th>
-            <th style={th}>Close</th>
             <th style={th}>Daily Return</th>
             <th style={th}>Return Z</th>
             <th style={th}>Volume Z</th>
