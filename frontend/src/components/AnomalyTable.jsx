@@ -40,7 +40,6 @@ export default function AnomalyTable({ anomalies, filter, search, sort }) {
           <tr style={{ background: '#f8fafc' }}>
             <th style={th}>Ticker</th>
             <th style={th}>Date</th>
-            <th style={th}>Close</th>
             <th style={th}>Daily Return</th>
             <th style={th}>Return Z</th>
             <th style={th}>Volume Z</th>
@@ -59,7 +58,6 @@ export default function AnomalyTable({ anomalies, filter, search, sort }) {
                   onMouseLeave={e => { if (!isExp) e.currentTarget.style.background = '#fff' }}>
                   <td style={{ ...td, fontWeight: '600', color: '#0f172a', fontSize: '14px' }}>{r.ticker}</td>
                   <td style={{ ...td, color: '#64748b' }}>{r.date}</td>
-                  <td style={td}>${parseFloat(r.close).toFixed(2)}</td>
                   <td style={{ ...td, color: retColor, fontWeight: '500' }}>{retSign}{(r.daily_return * 100).toFixed(1)}%</td>
                   <td style={{ ...td, fontFamily: 'monospace' }}>{r.return_zscore > 0 ? '+' : ''}{r.return_zscore.toFixed(2)}σ</td>
                   <td style={{ ...td, fontFamily: 'monospace' }}>{r.volume_zscore.toFixed(2)}σ</td>
